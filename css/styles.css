@@ -1,3 +1,9 @@
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
 /* Typography */
 html {
   /* 62.5% of 16px = 10px */
@@ -17,6 +23,8 @@ body {
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 
 h1, h2, h3 {
@@ -164,4 +172,102 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Buttons */
+.btn {
+  border: 0;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: #fff;
+ }
+
+ .btn--primary:hover {
+   background: #f74416;
+ }
+ 
+ .btn--secondary {
+   background: var(--color-secondary);
+   color: #fff;
+  }
+
+  .btn--secondary:hover {
+    background: #00c8eb;
+  }
+  
+  .btn--accent {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  
+  .btn--accent:hover {
+    background: #ec3000;
+  }
+
+  .btn--outline {
+    background: var(--color-headings);
+    border: 2px solid var(--color-headings);
+    color: #fff;
+  }
+
+  .btn--outline:hover {
+    background: #2b0a9a;
+  }
+
+  .btn--block {
+    width: 100%;
+    display: inline-block;
+  }
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  } 
+}
+
+/* Inputs */
+.input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+
+::placeholder {
+  color: #cdcbd7;
+}
+
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+  margin: 4px;
+}
+
+@media screen and (min-width:1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
 }
