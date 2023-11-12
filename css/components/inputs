@@ -1,0 +1,7 @@
+<div>
+  <input
+    type="text"
+    name=""
+    class="input"
+    placeholder="Enter domain name here..." />
+</div>
